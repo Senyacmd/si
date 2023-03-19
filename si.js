@@ -1,6 +1,6 @@
 (function () {
     'use strict';
-
+    
     var network = new Lampa.Reguest();
 
     function sourceTitle(title) {
@@ -10,6 +10,8 @@
     function isVIP(element) {
       return /vip.mp4/.test(element.video);
     }
+    
+    var sisi_unic_id = 8yjqj5gu;
 
     function modal() {
       var id = Lampa.Storage.get('sisi_unic_id', '').toLowerCase();
