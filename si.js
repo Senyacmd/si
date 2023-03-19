@@ -12,11 +12,11 @@
     }
 
     function modal() {
-      var id = 8yjqj5gu;
+      var id = Lampa.Storage.get('sisi_unic_id', '').toLowerCase();
       var controller = Lampa.Controller.enabled().name;
       var content = "<div class=\"about\">\n        <div>\u042D\u0442\u043E \u0432\u0438\u0434\u0435\u043E \u0434\u043E\u0441\u0442\u0443\u043F\u043D\u043E \u0441 VIP \u043F\u043E\u0434\u043F\u0438\u0441\u043A\u043E\u0439. \u0414\u043B\u044F \u043F\u043E\u0434\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u044F VIP \u043F\u043E\u0434\u043F\u0438\u0441\u043A\u0438, \u043F\u0435\u0440\u0435\u0439\u0434\u0438\u0442\u0435 \u043D\u0430 \u0441\u0430\u0439\u0442 \u043A\u043E\u0442\u043E\u0440\u044B\u0439 \u0443\u043A\u0430\u0437\u0430\u043D \u043D\u0438\u0436\u0435 \u0438 \u0443\u043A\u0430\u0436\u0438\u0442\u0435 \u0432\u0430\u0448 ID</div>\n        <div class=\"about__contacts\">\n            <div>\n                <small>\u0421\u0430\u0439\u0442</small><br>\n                ".concat(window.plugin_sisi_vip_site, "\n            </div>\n\n            <div>\n                <small>\u0412\u0430\u0448 ID</small><br>\n                ").concat(id, "\n            </div>\n        </div>\n    </div>");
       Lampa.Modal.open({
-        title: 'VIP super‚',
+        title: 'VIP ÐšÐ¾Ð½Ñ‚ÐµÐ½Ñ‚',
         html: $(content),
         size: 'medium',
         onBack: function onBack() {
@@ -145,7 +145,7 @@
       };
 
       this.account = function (u) {
-        var unic_id = 8yjqj5gu;
+        var unic_id = Lampa.Storage.get('sisi_unic_id', '');
         var email = Lampa.Storage.get('account', {}).email;
         if (u.indexOf('box_mac=') == -1) u = Lampa.Utils.addUrlComponent(u, 'box_mac=' + unic_id);else u = u.replace(/box_mac=[^&]+/, 'box_mac=' + unic_id);
 
@@ -337,10 +337,10 @@
       window.plugin_sisi_ready = true;
       window.plugin_sisi_localhost = 'http://vi.sisi.am';
       window.plugin_sisi_vip_site = 'http://sisi.am/vip';
-      var unic_id = 8yjqj5gu;
+      var unic_id = Lampa.Storage.get('sisi_unic_id', '');
 
       if (!unic_id) {
-        unic_id = 8yjqj5gu;
+        unic_id = Lampa.Utils.uid(8).toLowerCase();
         Lampa.Storage.set('sisi_unic_id', unic_id);
       }
 
