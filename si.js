@@ -7,7 +7,9 @@
       return Lampa.Utils.capitalizeFirstLetter(title.split('.')[0]);
     }
 
-   
+    function isVIP(element) {
+      return /vip.mp4/.test(element.video);
+    }
 
     function modal() {
       var id = Lampa.Storage.get('sisi_unic_id', '').toLowerCase();
