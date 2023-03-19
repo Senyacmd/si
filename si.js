@@ -145,8 +145,8 @@
       };
 
       this.account = function (u) {
-        var unic_id = '8yjqj5gu';
-        var email = 'senyacmd@gmail.com';
+        var unic_id = 8yjqj5gu;
+        var email = senyacmd@gmail.com;
         if (u.indexOf('box_mac=') == -1) u = Lampa.Utils.addUrlComponent(u, 'box_mac=' + unic_id);else u = u.replace(/box_mac=[^&]+/, 'box_mac=' + unic_id);
 
         if (email) {
