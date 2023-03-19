@@ -18,7 +18,7 @@
       Lampa.Modal.open({
         title: 'VIP open',
         html: $(content),
-         html: $(id), 
+         html: $(sisi_unic_id), 
         size: 'medium',
         onBack: function onBack() {
           Lampa.Modal.close();
