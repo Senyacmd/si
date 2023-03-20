@@ -102,7 +102,7 @@
       sourceTitle: sourceTitle,
       play: play,
       fixCards: fixCards,
-      isVIP: isVIP
+     
     };
 
     var menu;
